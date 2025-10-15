@@ -1,5 +1,11 @@
 <?php
-include("../credentials.php");
+if (file_exists(__DIR__ . '/../credentials.php')) {
+    include(__DIR__ . '/../credentials.php');
+} else {
+    $main_username = getenv('ADMIN_USERNAME');
+    $main_password = getenv('ADMIN_PASSWORD');
+}
+
 if(isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
