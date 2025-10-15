@@ -1,8 +1,5 @@
 <?php
-$dbHost = "localhost";
-$dbUser = "root";
-$dbPass = "root";
-$dbName = "cms";
+include("../credentials.php");
 
 $conn = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
 
